@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<sdf version='1.6'>
+    <world name='default'>
+        <include>
+            <uri>model://sun</uri>
+        </include>
+        <model name='ground_plane'>
+            <static>1</static>
+            <link name='link'>
+                <collision name='collision'>
+                    <geometry>
+                        <plane>
+                            <normal>0 0 1</normal>
+                            <size>10 10</size>
+                        </plane>
+                    </geometry>
+                    <surface>
+                        <friction>
+                            <ode>
+                                <mu>100</mu>
+                                <mu2>50</mu2>
+                            </ode>
+                        </friction>
+                        <bounce/>
+                        <contact>
+                            <ode/>
+                        </contact>
+                    </surface>
+                    <max_contacts>10</max_contacts>
+                </collision>
+                <visual name='visual'>
+                    <cast_shadows>0</cast_shadows>
+                    <geometry>
+                        <plane>
+                            <normal>0 0 1</normal>
+                            <size>100 100</size>
+                        </plane>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Grass</name>
+                        </script>
+                    </material>
+                </visual>
+                <velocity_decay>
+                    <linear>0</linear>
+                    <angular>0</angular>
+                </velocity_decay>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+                <gravity>1</gravity>
+            </link>
+        </model>
+
+        <model name='obstacles'>
+            <static>1</static>
+            <link name="box_00">
+                <pose>5.0 2.0 1.0  0 0 0</pose>
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>0.5 0.5 2.0</size>
+                        </box>
+                    </geometry>
+                   <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Wood</name>
+                        </script>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>0.5 0.5 2.0</size>
+                        </box>
+                    </geometry>
+                </collision>
+            </link>
+            <link name="box_01">
+                <pose>1.0 -4.0 0.750  0 0 0</pose>
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>0.75 1.0 1.5</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>0.4 0.3 0.2 1</ambient>
+                        <diffuse>0.3 0.2 0.1 1</diffuse>
+                        <specular>0.1 0.1 0.1 1</specular>
+                        <emissive>0 0 0 0</emissive>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                        <size>0.75 1.0 1.5</size>
+                        </box>
+                    </geometry>
+                </collision>
+            </link>
+            <link name="box_02">
+                <pose>10.0 0.0 0.50  0 0 0</pose>
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>1.5 1.0 1.0</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>0.4 0.3 0.2 1</ambient>
+                        <diffuse>0.3 0.2 0.1 1</diffuse>
+                        <specular>0.1 0.1 0.1 1</specular>
+                        <emissive>0 0 0 0</emissive>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                        <size>1.5 1.0 1.0</size>
+                        </box>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+    </world>
+</sdf>
