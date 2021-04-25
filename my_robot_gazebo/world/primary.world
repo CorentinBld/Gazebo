@@ -11,7 +11,7 @@
                     <geometry>
                         <plane>
                             <normal>0 0 1</normal>
-                            <size>10 10</size>
+                            <size>15 15</size>
                         </plane>
                     </geometry>
                     <surface>
@@ -33,13 +33,13 @@
                     <geometry>
                         <plane>
                             <normal>0 0 1</normal>
-                            <size>100 100</size>
+                            <size>40 40</size>
                         </plane>
                     </geometry>
                     <material>
                         <script>
                             <uri>file://media/materials/scripts/gazebo.material</uri>
-                            <name>Gazebo/Grass</name>
+                            <name>Gazebo/WoodFloor</name>
                         </script>
                     </material>
                 </visual>
@@ -52,12 +52,56 @@
                 <gravity>1</gravity>
             </link>
         </model>
+		<model name='maillage'>
+            <static>1</static>
+			<!--maillage-->
+            <link name="pepsi">
+                <pose> 3.0 2.0 0 0 0 0 </pose>
+                <visual name="visual">
+                    <geometry>
+                        <mesh>
+                            <uri>
+                                file:///home/corentin/cours_ws/src/my_robot/my_robot_gazebo/world/meshes/Pepsi.STL
+                            </uri>
+                            <scale> 0.001 0.001 0.001 </scale>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Blue</name>
+                        </script>
+                    </material>  
+                </visual>
+            </link>
+            <!---->
+            <link name="coca">
+                <pose> 3.2 2.5 0 0 0 0 </pose>
+                <visual name="visual">
+                    <geometry>
+                        <mesh>
+                            <uri>
+                                file:////home/corentin/cours_ws/src/my_robot/my_robot_gazebo/world//meshes/coca.STL
+                            </uri>
+                            <scale> 0.001 0.001 0.001 </scale>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Red</name>
+                        </script>
+                    </material>
+                </visual>
+            </link>
+            <!--maillage-->
+		</model>
 
         <model name='obstacles'>
             <static>1</static>
-			
+
             <link name="haie_0">
-			<pose> -9 3 1.0 0 0 0</pose>
+			<pose> -3 -5 1.0 0 0 0</pose>
 			<visual name="visual">
 				<geometry>
 					<box>
@@ -71,7 +115,7 @@
 					<emissive>0 0 0 0</emissive>
 					<script>
                             			<uri>file://media/materials/scripts/gazebo.material</uri>
-                            			<name>Gazebo/Wood</name>
+                            			<name>Gazebo/Grass</name>
                         		</script>
 				</material>
 			</visual>
@@ -84,7 +128,7 @@
 			</collision>
 		</link>
 		<link name="haie_1">
-			<pose> 10 3 1.0 0 0 0</pose>
+			<pose> 1 4 1.0 0 0 0</pose>
 			<visual name="visual">
 				<geometry>
 					<box>
@@ -98,7 +142,7 @@
 					<emissive>0 0 0 0</emissive>
 					<script>
                             			<uri>file://media/materials/scripts/gazebo.material</uri>
-                            			<name>Gazebo/Wood</name>
+                            			<name>Gazebo/Grass</name>
                         		</script>
 				</material>
 			</visual>
@@ -111,7 +155,7 @@
 			</collision>
 		</link>
 		<link name="haie_2">
-			<pose> -6 -8 1.0 0 0 0</pose>
+			<pose> -4 7 1.0 0 0 0</pose>
 			<visual name="visual">
 				<geometry>
 					<box>
@@ -125,7 +169,7 @@
 					<emissive>0 0 0 0</emissive>
 					<script>
                             			<uri>file://media/materials/scripts/gazebo.material</uri>
-                            			<name>Gazebo/Wood</name>
+                            			<name>Gazebo/Grass</name>
                         		</script>
 				</material>
 			</visual>
@@ -138,7 +182,7 @@
 			</collision>
 		</link>
 		<link name="haie_3">
-			<pose> 8 -9 1.0 0 0 0</pose>
+			<pose> -6 6 1.0 0 0 0</pose>
 			<visual name="visual">
 				<geometry>
 					<box>
@@ -152,7 +196,7 @@
 					<emissive>0 0 0 0</emissive>
 					<script>
                             			<uri>file://media/materials/scripts/gazebo.material</uri>
-                            			<name>Gazebo/Wood</name>
+                            			<name>Gazebo/Grass</name>
                         		</script>
 				</material>
 			</visual>
@@ -165,7 +209,7 @@
 			</collision>
 		</link>
 		<link name="haie_4">
-			<pose> 4 5 1.0 0 0 0</pose>
+			<pose> 5 -2 1.0 0 0 0</pose>
 			<visual name="visual">
 				<geometry>
 					<box>
@@ -179,7 +223,34 @@
 					<emissive>0 0 0 0</emissive>
 					<script>
                             			<uri>file://media/materials/scripts/gazebo.material</uri>
-                            			<name>Gazebo/Wood</name>
+                            			<name>Gazebo/Grass</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>2.0 0.5 1.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="haie_5">
+			<pose> 5 -1 1.0 0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>2.0 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Grass</name>
                         		</script>
 				</material>
 			</visual>
@@ -192,7 +263,7 @@
 			</collision>
 		</link>
 		<link name="haie90%_0">
-			<pose> -5 -1 0.5 0 0 1.5708</pose>
+			<pose> -12 3 0.5 0 0 1.5708</pose>
 			<visual name="visual">
 				<geometry>
 					<box>
@@ -219,7 +290,7 @@
 			</collision>
 		</link>
 		<link name="haie90%_1">
-			<pose> 10 -10 0.5 0 0 1.5708</pose>
+			<pose> 12 10 0.5 0 0 1.5708</pose>
 			<visual name="visual">
 				<geometry>
 					<box>
@@ -246,7 +317,7 @@
 			</collision>
 		</link>
 		<link name="haie90%_2">
-			<pose> -1 -1 0.5 0 0 1.5708</pose>
+			<pose> -8 -6 0.5 0 0 1.5708</pose>
 			<visual name="visual">
 				<geometry>
 					<box>
@@ -273,7 +344,7 @@
 			</collision>
 		</link>
 		<link name="haie90%_3">
-			<pose> 1 -9 0.5 0 0 1.5708</pose>
+			<pose> -2 2 0.5 0 0 1.5708</pose>
 			<visual name="visual">
 				<geometry>
 					<box>
@@ -300,7 +371,34 @@
 			</collision>
 		</link>
 		<link name="haie90%_4">
-			<pose> -4 3 0.5 0 0 1.5708</pose>
+			<pose> -8 5 0.5 0 0 1.5708</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>2.0 0.5 1.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Grass</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>2.0 0.5 1.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="haie90%_5">
+			<pose> -9 -5 0.5 0 0 1.5708</pose>
 			<visual name="visual">
 				<geometry>
 					<box>
