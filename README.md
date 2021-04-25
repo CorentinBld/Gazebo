@@ -31,6 +31,7 @@ ligne de code
 
 
 
+
 [Génerateur d'Obstacle](https://colab.research.google.com/drive/1tZZCMmAjYU4CRFgQJMlaLibpEjnBEvin)
 
 
@@ -54,6 +55,6 @@ ligne de code
 
 
 
-## h2
+## Difficultés rencontrées lors de la réalisation
 
 
