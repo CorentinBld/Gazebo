@@ -10,17 +10,41 @@ Dans ce Readme nous allons vous exposer la mise en œuvre du projet, puis ses fo
 ### **Création du Robot**
 #### *Méthode URDF*
 
-```
-ligne de code
-```
+Pour créer un robot sur ROS-Gazebo, il est imperatif de faire d'abbord sa description, et pour ce faire on fait récours au fichier URDF (Universal Robot Description File).
+Voici un schéma cinématique de notre robot en vue de dessus.
+![](https://i.imgur.com/HZOCtJ9.png)
 
+Pour créer le corps du robot, on a; 
+    
+-créer un package "my robot description" dans          lequel on a mis notre fichier 01-                      description.urdf, qui défini le robot (son nom,        le corps du robot,l'afficheur deu robot, etc.)
 
+-ensuite on crée un fichier "display.launch" dans      lequel on precise le fichier URDF à charger pour      l'afficher, on y met aussi des sliders permetant      de faire bouger les joints du robot.Puis on execute la ligne de commande
+```
+roslaunch my_robot_description display.launch
+```
+ce qui affiche une fenetre vide; 
+![](https://i.imgur.com/e5R3G1s.png)
+
+Dans la fênetre on ajoute base link et ça affiche la forme de notre robot. 
+
+![](https://i.imgur.com/NQlE5HR.png)
 
 #### *Méthode XACRO*
 
+Une fois qu'on a un modéle URDF, le robot commence à avoir des élémets de plus en plus complexes, on ne peut donc plus coder manuellement, pour cela on fait récours au macros XACRO. Un des avantages du XACRO ets qu'il nous permet de déclarer des variables qui nous facilitera la tâche si l'on veut changer les dimensions d'un ou olusieurs composants du robot.
+Le XACRO lit le URDF, et il est appellé ainsi: 
 ```
-ligne de code
+$ x ac r o −−i n o r d e r model . x ac r o > model . u r d f
 ```
+la ligne de commande pour lancer le modèle robot.xacro est la même qu'au dessus juste il faut avoir changer le nom du dossier que nous souhaitons ouvrir dans le display.launch
+C'est grâce à cette ligne de commande que l'on choisi le fichier à ouvrir 
+```
+<arg name="model" default="$(find my_robot_description)/urdf/02-description.xacro"/>
+```
+Modèle avec xacro:
+![](https://i.imgur.com/ZIcNQ4P.png)
+
+
 
 
 ### **Création du World**
@@ -89,7 +113,7 @@ Code disponible juste dessous:
 ```
 On obtien le résulta sur l'image avec le code du dessus est aprés avoir tapé les commandes suivante.
 
-La premier serre pour ajouter le chemin du fichier world 
+La premier sert à ajouter le chemin du fichier world 
 ```
 export GAZEBO_RESOURCE_PATH=~/cours_ws/src/my_robot/my_robot_gazebo/world/:$GAZEBO_RESOURCE_PATH
 ```
@@ -113,31 +137,33 @@ Pour voir le résulta on utilise les commande donnée juste aux dessus on obtien
 
 ![](https://i.imgur.com/Xh9OHLd.png)
 
-Nous avons pour finir ajouter des objets mallet à notre world
+Nous avons pour finir ajouter des objets maillé à notre world
 
-#### *Ajout D'Objets mallet*
+#### *Ajout D'Objets maillé*
+Pour avoir un environement satisfaisant, on a ajouter au géométries canoniques des maillages surfaciques texturés.Pour cela nous avons utilisé la même méthode que pour les objets canoniques vue au dessus 
 
+[Générateur d'objets maillé](https://colab.research.google.com/drive/19Q-QYqiCwub351cEKuQuujDepv4k78kM?usp=sharing)
 
+Résultat obtenue aprés avoir ajouter les objets maillé a notre monde 
 
+![](https://i.imgur.com/cPGNuuT.png)
 
+![](https://i.imgur.com/AY2Ero7.png)
 
+### *Création de l'environnement de simulation*
 
+Pour avoir un environnement de simulation sous ROS dans GAZEBO, on a utilisé le format SDF (Standard Data Format). Elle encapsule une description complète du world comprenant le modèle, la scène, le physique et les plugins. 
 
-
-## h2
-
-
-
-
-
-
-
-
+### *Ajout des plugins* 
 
 
+### *Lancement de la simulation*
 
 
 
-## Difficultés rencontrées lors de la réalisation
+
+
+
+## Difficultés rencontrées lors de la réalisasion
 
 
