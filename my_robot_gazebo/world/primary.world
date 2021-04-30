@@ -55,45 +55,197 @@
 		<model name='maillage'>
             <static>1</static>
 			<!--maillage-->
-            <link name="pepsi">
-                <pose> 3.0 2.0 0 0 0 0 </pose>
-                <visual name="visual">
-                    <geometry>
-                        <mesh>
-                            <uri>
-                                file:///home/corentin/cours_ws/src/my_robot/my_robot_gazebo/world/meshes/Pepsi.STL
-                            </uri>
-                            <scale> 0.001 0.001 0.001 </scale>
-                        </mesh>
-                    </geometry>
-                    <material>
-                        <script>
-                            <uri>file://media/materials/scripts/gazebo.material</uri>
-                            <name>Gazebo/Blue</name>
-                        </script>
-                    </material>  
-                </visual>
-            </link>
-            <!---->
-            <link name="coca">
-                <pose> 3.2 2.5 0 0 0 0 </pose>
-                <visual name="visual">
-                    <geometry>
-                        <mesh>
-                            <uri>
-                                file:////home/corentin/cours_ws/src/my_robot/my_robot_gazebo/world//meshes/coca.STL
-                            </uri>
-                            <scale> 0.001 0.001 0.001 </scale>
-                        </mesh>
-                    </geometry>
-                    <material>
-                        <script>
-                            <uri>file://media/materials/scripts/gazebo.material</uri>
-                            <name>Gazebo/Red</name>
-                        </script>
-                    </material>
-                </visual>
-            </link>
+      <link name="pepsi_0">
+			<pose> -3 0 0 0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+					  <uri>
+             file:///home/corentin/cours_ws/src/my_robot/my_robot_gazebo/world/meshes/Pepsi.STL
+           </uri>
+           <scale> 0.001 0.001 0.001 </scale>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+           <uri>file://media/materials/scripts/gazebo.material</uri>
+           <name>Gazebo/Red</name>
+					</script>
+				</material>
+			</visual>
+		</link>
+		<link name="pepsi_1">
+			<pose> 4 -5 0 0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+					  <uri>
+             file:///home/corentin/cours_ws/src/my_robot/my_robot_gazebo/world/meshes/Pepsi.STL
+           </uri>
+           <scale> 0.001 0.001 0.001 </scale>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+           <uri>file://media/materials/scripts/gazebo.material</uri>
+           <name>Gazebo/Red</name>
+					</script>
+				</material>
+			</visual>
+		</link>
+		<link name="pepsi_2">
+			<pose> -1 -7 0 0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+					  <uri>
+             file:///home/corentin/cours_ws/src/my_robot/my_robot_gazebo/world/meshes/Pepsi.STL
+           </uri>
+           <scale> 0.001 0.001 0.001 </scale>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+           <uri>file://media/materials/scripts/gazebo.material</uri>
+           <name>Gazebo/Red</name>
+					</script>
+				</material>
+			</visual>
+		</link>
+		<link name="pepsi_3">
+			<pose> -9 -10 0 0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+					  <uri>
+             file:///home/corentin/cours_ws/src/my_robot/my_robot_gazebo/world/meshes/Pepsi.STL
+           </uri>
+           <scale> 0.001 0.001 0.001 </scale>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+           <uri>file://media/materials/scripts/gazebo.material</uri>
+           <name>Gazebo/Red</name>
+					</script>
+				</material>
+			</visual>
+		</link>
+		<link name="pepsi_4">
+			<pose> 2 -7 0 0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+					  <uri>
+             file:///home/corentin/cours_ws/src/my_robot/my_robot_gazebo/world/meshes/Pepsi.STL
+           </uri>
+           <scale> 0.001 0.001 0.001 </scale>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+           <uri>file://media/materials/scripts/gazebo.material</uri>
+           <name>Gazebo/Red</name>
+					</script>
+				</material>
+			</visual>
+		</link>
+		<link name="coca_0">
+			<pose> 5 5 0 0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+					  <uri>
+             file:////home/corentin/cours_ws/src/my_robot/my_robot_gazebo/world//meshes/coca.STL
+           </uri>
+           <scale> 0.001 0.001 0.001 </scale>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+           <uri>file://media/materials/scripts/gazebo.material</uri>
+           <name>Gazebo/Blue</name>
+					</script>
+				</material>
+			</visual>
+		</link>
+		<link name="coca_1">
+			<pose> 2 10 0 0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+					  <uri>
+             file:////home/corentin/cours_ws/src/my_robot/my_robot_gazebo/world//meshes/coca.STL
+           </uri>
+           <scale> 0.001 0.001 0.001 </scale>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+           <uri>file://media/materials/scripts/gazebo.material</uri>
+           <name>Gazebo/Blue</name>
+					</script>
+				</material>
+			</visual>
+		</link>
+		<link name="coca_2">
+			<pose> -12 0 0 0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+					  <uri>
+             file:////home/corentin/cours_ws/src/my_robot/my_robot_gazebo/world//meshes/coca.STL
+           </uri>
+           <scale> 0.001 0.001 0.001 </scale>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+           <uri>file://media/materials/scripts/gazebo.material</uri>
+           <name>Gazebo/Blue</name>
+					</script>
+				</material>
+			</visual>
+		</link>
+		<link name="coca_3">
+			<pose> 1 -15 0 0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+					  <uri>
+             file:////home/corentin/cours_ws/src/my_robot/my_robot_gazebo/world//meshes/coca.STL
+           </uri>
+           <scale> 0.001 0.001 0.001 </scale>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+           <uri>file://media/materials/scripts/gazebo.material</uri>
+           <name>Gazebo/Blue</name>
+					</script>
+				</material>
+			</visual>
+		</link>
+		<link name="coca_4">
+			<pose> -6 1 0 0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+					  <uri>
+             file:////home/corentin/cours_ws/src/my_robot/my_robot_gazebo/world//meshes/coca.STL
+           </uri>
+           <scale> 0.001 0.001 0.001 </scale>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+           <uri>file://media/materials/scripts/gazebo.material</uri>
+           <name>Gazebo/Blue</name>
+					</script>
+				</material>
+			</visual>
+		</link>
+
             <!--maillage-->
 		</model>
 
