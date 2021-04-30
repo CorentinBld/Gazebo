@@ -5,7 +5,15 @@ Dans le cadre du cours de programmation robotique, on a été amener à réalise
 Dans ce Readme nous allons vous exposer la mise en œuvre du projet, puis ses fonctionnalités ainsi que les difficultés rencontrées lors de la réalisation de celui-ci.
 ## Mise en œuvre du Projet 
 ### **Création du Projet**
+Dans ce projet nous avons respecter un arbre de création bien précise en fonction de chaque partie du projet.
+
+Image de l'arbre de création 
+![](https://i.imgur.com/E6gvC16.png)
+ 
 #### *Organisation du Projet*
+Dans l'organisation de ce projet nous avons commencer par créé un dossier cours_ws dans le quelle nous avons créé quatres sous dossier my_robot_description; my_robot_gazebo; my_robot_navigation et my_robot_control. chaqu'un d'eux contiendra des répertoire avec les différent code composent le projet. image de l'arboressence juste audessus.
+
+Pour commencer nous avons créé un modéle de robot.
 
 ### **Création du Robot**
 #### *Méthode URDF*
@@ -158,10 +166,23 @@ Pour avoir un environnement de simulation sous ROS dans GAZEBO, on a utilisé le
 
 
 ### *Lancement de la simulation*
+Enfin une fois que nous avons fait tout les étape explique audessus. Nous avons lancer notre environnement de simulation avec les commande suivante.
+pour commencer si cela n'a pas etait fais avant il faudra sourcé avec la ligne de commande suivante 
+```
+source devel/setup.bash
+```
+Ensuite pour obtenir l'environement avec notre monde il faud lui tranferait le dossier du world dans le registre ou les monde sont enregitrer. Cette taches ce fais avec la ligne de code suivante
+```
+export GAZEBO_RESOURCE_PATH=~/cours_ws/src/my_robot/my_robot_gazebo/world/:$GAZEBO_RESOURCE_PATH
+```
+Pour finir on lance notre environement de simulation avec la commande suivante 
+```
+roslaunch my_robot_gazebo demo_gazebo.launch 
+```
+Une fois cette commande tapé l'ouverture peux mettre un peux de temps une fois gazebo ouvert on obtient cela.
+image si dessous 
 
-
-
-
+![](https://i.imgur.com/TU72Pi2.png)
 
 
 ## Difficultés rencontrées lors de la réalisasion
