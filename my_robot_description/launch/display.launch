@@ -1,7 +1,7 @@
 
 <launch>
     <arg name="model" default="$(find my_robot_description)/urdf/02-description.xacro"/>
-    <arg name="rvizconfig" default="$(find my_robot_description)/rviz/urdf.rviz" />
+    <arg name="rvizconfig" default="$(find my_robot_description)/rviz/urdf2.rviz" />
     <arg name="gui" default="true" />
 
     <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model)" />
