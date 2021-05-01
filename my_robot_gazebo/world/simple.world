@@ -1,9 +1,12 @@
+<!--création du monde le plus simple que nous pouvons faire avec un soleil est un ground_plane-->>
 <?xml version="1.0"?>
 <sdf version='1.6'>
     <world name='default'>
+    <!-- insertion du soleil-->
         <include>
             <uri>model://sun</uri>
         </include>
+        <!-- insertion du ground_plane avec c'est caractéristique-->
         <model name='ground_plane'>
             <static>1</static>
             <link name='link'>

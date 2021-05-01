@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <sdf version='1.6'>
+<!--monde de base "simple_world"-->
     <world name='default'>
         <include>
             <uri>model://sun</uri>
@@ -52,6 +53,7 @@
                 <gravity>1</gravity>
             </link>
         </model>
+		<!--ajout des fichier maillé à notre world crée avec notre générateur d'objets maillé lien dans notre readme -->
 		<model name='maillage'>
             <static>1</static>
 			<!--maillage-->
@@ -248,7 +250,7 @@
 
             <!--maillage-->
 		</model>
-
+		<!--ajout des géometrie canonique dans notre world,crée avec notre générateur d'obstacles le lien dans notre readme -->
         <model name='obstacles'>
             <static>1</static>
 

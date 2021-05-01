@@ -1,3 +1,4 @@
+<!--fichier faisent appel à notre model de robot et les capteurs-->
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="my_robot">
 

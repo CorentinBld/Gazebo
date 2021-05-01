@@ -1,3 +1,4 @@
+<!--fichier contenent les pluging les differents capteurs disponible sous notre robot-->
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="my_robot">
 
