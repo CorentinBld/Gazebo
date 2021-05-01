@@ -1,4 +1,4 @@
-
+<!--Fichier qui premet l'affichage de notre model de robot sous RVIZ et Gazebo-->
 <launch>
     <arg name="model" default="$(find my_robot_description)/urdf/02-description.xacro"/>
     <arg name="rvizconfig" default="$(find my_robot_description)/rviz/urdf2.rviz" />
