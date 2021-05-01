@@ -171,7 +171,7 @@ normalement renvoyés par de vrais capteurs) comme dans la réalité.
 Nous on ajouté la caméra et un laserscan (une sorte de lidar) tout deux sont des plugins du type sensor 
 La caméra offre des nombreux paramètres, portant sur la résolution de l'image, la fréquence
 de rafraîssement, profondeur de champ et le bruit du signal.
-Quant au laserscan 
+Quant au laserscan il permet la simulation de capteurs de rayons dans Gazebo.
 ### *Lancement de la simulation*
 Enfin une fois que nous avons fait tout les étapes expliqué au dessus. Nous avons lancer notre environnement de simulation avec les commandes suivante.
 pour commencer si cela n'a pas été fait avant, il faudra sourcer avec la ligne de commande suivante 
