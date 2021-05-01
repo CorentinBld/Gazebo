@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <launch>
- 
+ <!-- liaison avec les différents fichiers de configuration-->
  <arg name="model" default="$(find my_robot_gazebo)/urdf/description.xacro"/>
  
  <rosparam command="load"
